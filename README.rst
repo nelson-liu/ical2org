@@ -1,13 +1,13 @@
-ical2orgpy
-==========
+ical2org
+========
 
 This script converts an ical calendar (for instance, as exported from google
 calendar) into an org-mode document. It is conceived as a replacement of the awk
 script located at http://orgmode.org/worg/org-tutorials/org-google-sync.html ,
 and the Python script located at https://github.com/asoroa/ical2org.py.
 
-The main difference is that ical2orgpy correctly manages recurring events.
-ical2orgpy duplicates all recurring events falling into a specified time-frame
+The main difference is that this script correctly manages recurring events.
+It duplicates all recurring events falling into a specified time-frame
 into the exported org-document.
 
 Installing from source code
@@ -20,7 +20,7 @@ You can install the package directly from source::
 
 To use the script, just call::
 
-  $ ~/.local/bin/ical2orgpy
+  $ ~/.local/bin/ical2org
 
 Alternatively, you can use the `pipsi` package, by just doing::
 
@@ -31,18 +31,18 @@ Alternatively, you can use the `pipsi` package, by just doing::
 
 Usage
 =====
-Simply use the `ical2orgpy` command::
+Simply use the `ical2org` command::
 
-    $ ical2orgpy --help
+    $ ical2org --help
 
 or, if installed locally from the git repo::
 
-    $ ~/.local/bin/ical2orgpy
+    $ ~/.local/bin/ical2org
 
 .. highlight:: bash
 				   
 The script requires two files, the input ics and the output org
-document. Usually, `ical2orgpy` is called within a script that grabs the
+document. Usually, `ical2org` is called within a script that grabs the
 ical file from some source (i.e. Google Calendar), and generates the
 appropriate org document. Such an script would have the following shape::
 
@@ -64,18 +64,3 @@ appropriate org document. Such an script would have the following shape::
 See further instructions here:
 
 http://orgmode.org/worg/org-tutorials/org-google-sync.html
-
-Development
-===========
-Clone the repository and cd into it.
-
-Assuming you have Python 2.7 and `tox` package installed::
-
-    $ tox -e py27
-
-Then activate the virtualenv::
-
-    $ source .tox/py27/bin/activate
-    (py27)$
-
-And use here the package.
