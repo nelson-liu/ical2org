@@ -105,9 +105,7 @@ setup(
     author=AUTHOR,
     author_email=EMAIL,
     url=URL,
-    packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
-    # If your package is a single module, use this instead of 'packages':
-    # py_modules=['mypackage'],
+    py_modules=['ical2org'],
 
     entry_points={"console_scripts": ["ical2org=ical2org:main"]},
     install_requires=REQUIRED,
