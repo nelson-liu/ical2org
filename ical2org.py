@@ -142,8 +142,8 @@ def print_timezones(ctx, param, value):
     help="Include the location (if present) in the headline. (Location is included by default).")
 @click.argument("ics_file", type=click.File("r", encoding="utf-8"))
 @click.argument("org_file", type=click.File("w", encoding="utf-8"))
-def main(ics_file, org_file, email, days, timezone, include_location):
-    convertor = Convertor(days, timezone, email, include_location)
+def main(ics_file, org_file, days, timezone, include_location):
+    convertor = Convertor(days, timezone, include_location)
     try:
         convertor(ics_file, org_file)
     except IcalError as e:
