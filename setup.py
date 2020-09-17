@@ -26,7 +26,9 @@ REQUIRED = [
     'future',
     'icalendar',
     'pytz',
+    'pypandoc',
     'recurring-ical-events',
+    'tqdm',
     'tzlocal'
 ]
 
@@ -108,6 +110,7 @@ setup(
     # py_modules=['mypackage'],
 
     entry_points={"console_scripts": ["ical2org=ical2org:main"]},
+    install_requires=REQUIRED,
     include_package_data=True,
     license='MIT',
     classifiers=[

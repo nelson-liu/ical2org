@@ -3,5 +3,7 @@ click
 future
 icalendar
 pytz
+pypandoc
 recurring-ical-events
+tqdm
 tzlocal
