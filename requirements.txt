@@ -1,0 +1,7 @@
+beautifulsoup4
+click
+future
+icalendar
+pytz
+recurring-ical-events
+tzlocal
